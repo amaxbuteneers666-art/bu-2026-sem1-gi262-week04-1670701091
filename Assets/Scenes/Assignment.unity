@@ -421,7 +421,7 @@ MonoBehaviour:
     - key: Arrow
       value: 20
   as09ItemName: Health Potion
-  as09Quantity: 2
+  as09Quantity: 1
   as10EventQueue:
     values:
     - eventType: Attack
@@ -442,7 +442,7 @@ MonoBehaviour:
     - key: Defense
       value: 200
   as11StatName: Health
-  as11Value: 200
+  as11Value: 150
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
