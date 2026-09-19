@@ -10,19 +10,20 @@ namespace Solution {
         public void AddItem(string item, int amount)
         {
             // 1. ตรวจสอบว่ามีไอเท็มนี้ในคลังแล้วหรือยัง
-            if (inventory.ContainsKey(item))
+           if(inventory.ContainsKey(item))
             {
-                //int oldAmount = inventory[item];
-                //inventory[item] = oldAmount + amount;
+                //int m = inventory[item];
+               // m += amount;
+                //inventory[item] = m;
                 inventory[item] += amount;
             }
-            else 
+           else
             {
-             inventory.Add(item, amount);
+                inventory.Add(item, amount);    
             }
 
-
             Debug.Log("Added " + amount + " " + item + ". Total: " + inventory[item]);
+
             PrintInventory();
         }
 
@@ -30,29 +31,33 @@ namespace Solution {
         public void RemoveItem(string item, int amount)
         {
             //4. ตรวจสอบว่ามีไอเท็มนี้ในคลังหรือไม่
-
-            if (HasItem(item, amount))
+            if(HasItem(item,amount))
             {
-                //int oldAmount = inventory[item];
-                //oldAmount -= amount;
-                //inventory.Remove(item);
                 inventory[item] -= amount;
                 if (inventory[item] <= 0)
                 {
                     inventory.Remove(item);
                 }
             }
-
-            PrintInventory();
+            else
+            {
+                Debug.Log($"not enough, you have{GetItemCount(item)}");
+            }
+            
         }
         public bool HasItem(string item, int amount)
         {
             //2. ตรวจสอบว่ามีไอเท็มนี้ในคลังหรือไม่ และมีจำนวนเพียงพอหรือไม่
+            //return false;
             if (inventory.ContainsKey(item))
             {
-                return inventory[item] >= amount;
+                if (inventory[item] >= amount)
+                {
+                    return true;
+                }
+                
             }
-            return false;
+             return false;  
         }
         // ตรวจสอบจำนวนไอเท็ม
         public int GetItemCount(string item)
@@ -62,11 +67,11 @@ namespace Solution {
             {
                 return inventory[item];
             }
-            else 
+            else
             {
                 return 0;
-                
             }
+            
         }
 
         // แสดงรายการทั้งหมดในคลัง

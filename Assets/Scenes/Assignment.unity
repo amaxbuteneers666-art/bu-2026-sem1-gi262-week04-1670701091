@@ -382,30 +382,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86fbaf664c0f73049ab5d67e60db4318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assignment.Assignment
-  as01Words: []
-  as02Numbers: 
-  as03Input: 
+  as01Words:
+  - apple
+  - banana
+  - orange
+  as02Numbers: 010000000200000002000000030000000300000003000000
+  as03Input: ([{}])
   as04List:
-    values: 
+    values: 0a000000140000001e0000002800000032000000
   as05List:
-    values: []
+    values:
+    - 'Apple '
+    - ' Banana'
+    - Cherry
+    - Durian
+    - Egg
   as06FirstDictionary:
-    entries: []
+    entries:
+    - key: Apple
+      value: 10
+    - key: Banana
+      value: 20
   as06SecondDictionary:
-    entries: []
+    entries:
+    - key: Orange
+      value: 30
+    - key: Grape
+      value: 40
   as07List:
-    values: 
-  as08Numbers: 
+    values: 0a00000014000000140000001e0000001e0000001e00000028000000
+  as08Numbers: 01000000020000000200000002000000030000000300000004000000
   as09Inventory:
-    entries: []
-  as09ItemName: 
-  as09Quantity: 0
+    entries:
+    - key: Potion
+      value: 5
+    - key: Sword
+      value: 1
+    - key: Arrow
+      value: 20
+  as09ItemName: Health Potion
+  as09Quantity: 2
   as10EventQueue:
-    values: []
+    values:
+    - eventType: Attack
+      name: Player Attack
+      priority: 10
+    - eventType: Heal
+      name: Player Heal
+      priority: 50
+    - eventType: Enemy
+      name: Enemy Attack
+      priority: 5
   as11PlayerStats:
-    entries: []
-  as11StatName: 
-  as11Value: 0
+    entries:
+    - key: Health
+      value: 1000
+    - key: Attack
+      value: 500
+    - key: Defense
+      value: 200
+  as11StatName: Health
+  as11Value: 200
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
